@@ -13,12 +13,12 @@
     </v-btn>
     
     <!-- Edit Note Button -->
-    <v-btn icon router :to="editLinkPath" v-if="viewMode">
+    <v-btn icon router :to="editLinkPath" v-show="viewMode">
       <v-icon>edit</v-icon>
     </v-btn>
     
     <!-- Save Note Button -->
-    <v-btn icon v-if="editMode" :loading="loading" :disabled="loading" @click="saveNoteAndReturnToEditMode()">
+    <v-btn icon v-show="editMode" :loading="loading" :disabled="loading" @click="saveNoteAndReturnToEditMode()">
       <v-icon>save</v-icon>
     </v-btn>
 
@@ -28,9 +28,6 @@
         <v-icon>more_vert</v-icon>
       </v-btn>
       <v-list>
-        <v-list-tile>
-          <v-list-tile-title>Send Message</v-list-tile-title>
-        </v-list-tile>
         <v-list-tile>
           <v-list-tile-title>Settings</v-list-tile-title>
         </v-list-tile>

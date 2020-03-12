@@ -17,7 +17,7 @@
     <v-footer app class="pa-2">
       <v-progress-linear class="app-loader" :indeterminate="loading" 
         v-if="loading" height="5" success></v-progress-linear>
-      <span v-if="!loading">GC Services &copy; 2018</span>
+      <span v-if="!loading">Emanuel Tirado &copy; 2018</span>
     </v-footer>
   </v-app>
 </template>

@@ -3,13 +3,10 @@
     <div v-if="note">
       <v-form v-model="valid">
         <v-text-field :value="note.title" @input="updateNoteForm({ key: 'title', value: $event })" label="Title" required></v-text-field>        
-        <v-text-field :value="note.content" @input="updateNoteForm({ key: 'content', value: $event })" label="Note" multi-line></v-text-field>        
+        <v-textarea :value="note.content" @input="updateNoteForm({ key: 'content', value: $event })" label="Note"></v-textarea>        
       </v-form>
-      <div class="content">
-        {{ note.content }}
-      </div>
     </div>
-  </div>
+  </div> 
 </template>
 
 <script>
@@ -23,9 +20,6 @@ export default {
   },
   methods: {
     ...mapActions(["updateNoteForm"]),
-    // updateNoteForm({ key, value }) {
-    //   this.$store.dispatch("updateNoteForm", { key, value });
-    // }
   },
   computed: {
     ...mapGetters({
